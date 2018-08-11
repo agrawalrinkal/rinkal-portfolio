@@ -2,21 +2,34 @@
   <head>
   </head>
   <body>
-    <div class="content-height bg-danger">
-      <div class="text-center" style="height:90vh">Content</div>
+    <div class="page-size" id="pageContent" [ngClass]="[newState.backgroundColor, newState.fontColor]" (click)="descriptionClicked()">
+      <div class="content" onselectstart="return false">
+        <div class="picture">
+            <img src="../assets/headshot-informal.png" class="rounded-circle" alt="Headshot" width="200"> 
+        </div>
+        <div class="description">
+            <label [@flyInOut]="stateStatus">{{newState.question}}</label>
+            <hr class="animated bounceInUp">
+            <label [@flyInOut]="stateStatus">{{newState.answer}}</label>
+        </div>
+
+      </div>
+
       <div class="text-white text-center" style="height:10vh">
         <div>
-          <a href="www.facbook.com"><i class="fa fa-file-text-o fa-lg" aria-hidden="true"></i></a>
-          <a href="https://github.com/agrawalrinkal"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
-          <a href="https://www.linkedin.com/in/rinkal63/"><i class="fa fa-linkedin-square fa-lg" aria-hidden="true"></i></a>
-          <a href="https://www.facebook.com/agrawalrinkal63"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i></a>
-          <a href="www.facbook.com"><i class="fa fa-medium fa-lg" aria-hidden="true"></i></a>
-          <a href="mailto:rinkal.agrawal.us@gmail.com"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a>
-          <a href="https://www.quora.com/profile/Rinkal-Agrawal"><i class="fa fa-quora fa-lg" aria-hidden="true"></i></a>
+          <a class="active" target="_blank" href="https://github.com/agrawalrinkal/rinkal-portfolio/blob/master/Resume.pdf"><i class="fa fa-file-text-o fa-lg" aria-hidden="true"></i></a>
+          <a class="active" target="_blank" href="https://github.com/agrawalrinkal"><i class="fab fa-github-alt fa-lg" aria-hidden="true"></i></a>
+          <a class="active" target="_blank" href="https://www.linkedin.com/in/rinkal63/"><i class="fa fa-linkedin-square fa-lg" aria-hidden="true"></i></a>
+          <a class="active" target="_blank" href="https://www.facebook.com/agrawalrinkal63"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i></a>
+          <a class="active" target="_blank" href="https://medium.com/@agrawal_rinkal"><i class="fa fa-medium fa-lg" aria-hidden="true"></i></a>
+          <!-- <a class="active" target="_blank" href="mailto:rinkal.agrawal.us@gmail.com"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a> -->
+          <a class="active" target="_blank" href="https://www.quora.com/profile/Rinkal-Agrawal"><i class="fa fa-quora fa-lg" aria-hidden="true"></i></a>
         </div>
-        <div class="mt-3">
-          <label>Build with <i class="fa fa-heart-o" aria-hidden="true"></i> using 
-            <i class="devicon-angularjs-plain"></i> and <i class="devicon-bootstrap-plain"></i></label>
+        <div class="mt-3 credit">
+          <label>
+            Built with <i class="fa fa-heart-o" aria-hidden="true"></i> using 
+            <a target="_blank" href="'https://angular.io/"><i class="devicon-angularjs-plain"></i>v6</a>
+          </label>
         </div>
       </div>
     </div>

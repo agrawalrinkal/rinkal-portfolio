@@ -1,18 +1,7 @@
 
-html {
+html, body {
   height: 100vh;
-}
-body {
   height: 100%;
-}
-.container {
-  width: 100%;
-  max-width: 1550px;
-  }
-
-.content-height {
-  height: 100vh; 
-  width:  100%;
 }
 
 div {
@@ -22,17 +11,68 @@ div {
 
 a {
   margin-right: 25px;
-  color: inherit;
+  color: lightgray;
+  /* cursor: default; */
 }
 a:hover {
- 
-}
-
-button:focus {
-    outline:0;
+  color: white;
 }
 /* 
-.content-height::-webkit-scrollbar { 
-  display: none; 
-  width:0px;
+img {
+  pointer-events: none;
 } */
+
+.credit label {
+  margin-bottom:0px;
+  line-height: 20px;
+}
+
+/* i {
+  vertical-align: middle;
+} */
+
+.page-size {
+  height: 100vh; 
+  width:  100%;
+  background: linear-gradient(to right, #f2fcfe, #1c92d2);
+}
+
+.content {
+  height:90vh;
+}
+
+.picture {
+  height:30vh;
+  align-self: left;
+  margin-left:20px;
+  padding-top:20px;
+}
+
+.description {
+  height:70vh;
+  font-size: 2.2em;
+  font-weight: bold;
+}
+.description label {
+  margin-left: 40%;
+  margin-right: 20%;
+  font-family: 'Catamaran', sans-serif;
+}
+
+.credit {
+  font-family: 'Titillium Web', sans-serif;
+  font-size:14px;
+}
+
+hr { 
+  display: block;
+  margin: 0px 20% 0px 40%;
+  padding:0px;
+  border-style: inset;
+  border-width: 2px;
+  border-color: black;
+}
+
+.devicon-angularjs-plain {
+  font-size: 1rem;
+}
